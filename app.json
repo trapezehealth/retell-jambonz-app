@@ -1,0 +1,33 @@
+{
+  "/retell": {
+    "pstnCarrier": {
+      "description": "Name of the Carrier you created for your SIP provider.",
+      "type": "string",
+      "required": true
+    },
+    "retellCarrier": {
+      "description": "Name of the Carrier you created for your SIP provider.",
+      "type": "string",
+      "required": true
+    },
+    "sipUsername": {
+      "description": "Username of the SIP client you created to authenticate with Retell.",
+      "type": "string",
+      "required": true
+    },
+    "sipPassword": {
+      "description": "Password of the SIP client you created to authenticate with Retell.",
+      "type": "string",
+      "obscure": true,
+      "required": true
+    },
+    "countryCode": {
+      "description": "Provide your local telephony country code if your PSTN carrier delivers calls in national number format, otherwise leave empty.",
+      "type": "string"
+    },
+    "overrideCallerId": {
+      "description": "Provide a caller ID number if you want all outbound calls from Retell to have a specified caller ID that is different than the calling number received from Retell.",
+      "type": "string"
+    }
+  }
+}

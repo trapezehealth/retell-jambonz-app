@@ -1,0 +1,23 @@
+{
+  "name": "retell-app",
+  "version": "0.0.1",
+  "description": "public app for retell integration",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "jslint": "eslint app.js lib"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@jambonz/node-client-ws": "^0.2.2",
+    "express": "^5.1.0",
+    "google-libphonenumber": "^3.2.40",
+    "pino": "^9.7.0",
+    "undici": "^7.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.27.0",
+    "eslint-plugin-promise": "^7.2.1"
+  }
+}
