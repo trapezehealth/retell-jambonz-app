@@ -6,7 +6,7 @@
       "required": true
     },
     "retellCarrier": {
-      "description": "Name of the Carrier you created for your SIP provider.",
+      "description": "Name of the Carrier you created for Retell.",
       "type": "string",
       "required": true
     },
