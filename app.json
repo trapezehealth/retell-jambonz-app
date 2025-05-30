@@ -28,6 +28,10 @@
     "overrideCallerId": {
       "description": "Provide a caller ID number if you want all outbound calls from Retell to have a specified caller ID that is different than the calling number received from Retell.",
       "type": "string"
+    },
+    "overrideDialedNumber": {
+      "description": "When sending calls to Retell, replace the incoming dialed number with this value.  This is useful if you are receiving calls from a PBX extension but need to send a proper E.164 number to Retell.",
+      "type": "string"
     }
   }
 }
