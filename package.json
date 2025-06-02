@@ -6,12 +6,13 @@
   "packageManager": "pnpm@10.9.0",
   "scripts": {
     "start": "node app",
-    "dev": "node app",
+    "dev": "node --watch --inspect app",
     "jslint": "eslint app.js lib"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@jambonz/node-client": "^0.4.3",
     "@jambonz/node-client-ws": "^0.2.2",
     "express": "^5.1.0",
     "google-libphonenumber": "^3.2.40",
