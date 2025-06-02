@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "public app for retell integration",
   "main": "app.js",
+  "packageManager": "pnpm@10.9.0",
   "scripts": {
     "start": "node app",
+    "dev": "node app",
     "jslint": "eslint app.js lib"
   },
   "author": "",
@@ -14,9 +16,11 @@
     "express": "^5.1.0",
     "google-libphonenumber": "^3.2.40",
     "pino": "^9.7.0",
+    "retell-sdk": "^4.32.0",
     "undici": "^7.10.0"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "eslint": "^9.27.0",
     "eslint-plugin-promise": "^7.2.1"
   }

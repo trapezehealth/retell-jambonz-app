@@ -12,6 +12,53 @@ For those of you not familiar with jambonz, it is an open source (MIT-licensed) 
 
 jambonz also provides value-added features that you can make use of, such as answering machine detection and playing entry prompts and the like that may be more cost effective to do before connecting calls to the LLM.
 
+## Environment Variables
+
+This application uses environment variables for configuration instead of the traditional jambonz app.json configuration system. For local development, you can create a `.env` file in the app root directory.
+
+### Required Variables
+- `PSTN_CARRIER` - Name of the Carrier you created for your SIP provider
+- `RETELL_CARRIER` - Name of the Carrier you created for Retell  
+- `SIP_USERNAME` - Username of the SIP client you created to authenticate with Retell
+- `SIP_PASSWORD` - Password of the SIP client you created to authenticate with Retell
+
+### Optional Variables
+- `WS_PORT` - WebSocket server port (default: 3000)
+- `LOGLEVEL` - Logging level (default: 'info')
+- `COUNTRY_CODE` - Your local telephony country code if your PSTN carrier delivers calls in national number format
+- `OVERRIDE_CALLER_ID` - Override caller ID for all outbound calls from Retell 
+- `OVERRIDE_DIALED_NUMBER` - Replace incoming dialed number with this value when sending to Retell
+
+### Local Development Setup
+
+Create a `.env` file in the app root directory with your configuration:
+
+```bash
+# Required
+PSTN_CARRIER=my-pstn-carrier
+RETELL_CARRIER=Retell
+SIP_USERNAME=retell-sip-user
+SIP_PASSWORD=secure-password
+
+# Optional
+WS_PORT=3000
+LOGLEVEL=info
+COUNTRY_CODE=1
+OVERRIDE_CALLER_ID=+15551234567
+OVERRIDE_DIALED_NUMBER=+15559876543
+```
+
+Then install dependencies and run the application:
+```bash
+pnpm install
+pnpm run dev
+# or
+pnpm start
+```
+
+The application will automatically load the environment variables from the `.env` file using the [dotenv](https://www.npmjs.com/package/dotenv) package.
+
+**Note:** Make sure to add `.env` to your `.gitignore` file to avoid committing sensitive credentials to version control.
 
 ## Configuration
 
