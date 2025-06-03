@@ -1,5 +1,5 @@
 {
-  "name": "retell-app",
+  "name": "@trapeze/retell-jambonz-app",
   "version": "0.0.1",
   "description": "public app for retell integration",
   "main": "app.js",
@@ -18,7 +18,7 @@
     "google-libphonenumber": "^3.2.40",
     "pino": "^9.7.0",
     "retell-sdk": "^4.32.0",
-    "undici": "^7.10.0"
+  "undici": "^7.10.0"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
