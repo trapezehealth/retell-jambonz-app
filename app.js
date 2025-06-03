@@ -111,7 +111,7 @@ function extractSbcCallId(callContext, logger) {
  * Updates the Jambonz call hook for transfer
  */
 function updateCallHook(client, session, target_key = null) {
-  const baseUrl = `${process.env.HTTP_BASE_URL}/api/transfer/call-hook`;
+  const baseUrl = `${process.env.JAMBONZ_APP_HTTP_BASE_URL}/api/transfer/call-hook`;
   const callHookUrl = target_key ? `${baseUrl}?target_key=${encodeURIComponent(target_key)}` : baseUrl;
   
   client.calls.update(session.call_sid, {
