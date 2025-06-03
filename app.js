@@ -182,6 +182,6 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({msg: err.message});
 });
 
-server.listen(port, () => {
-  logger.info(`jambonz websocket server listening at http://localhost:${port}`);
+server.listen(port, '0.0.0.0', () => {
+  logger.info(`jambonz websocket server listening at http://0.0.0.0:${port}`);
 });
